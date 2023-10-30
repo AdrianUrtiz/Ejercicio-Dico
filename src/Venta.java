@@ -1,4 +1,3 @@
-// Clase para representar una venta
 public class Venta {
     private Empleado empleado;
     private double monto;
@@ -7,6 +6,4 @@ public class Venta {
         this.empleado = empleado;
         this.monto = monto;
     }
-
-    // Otros métodos getter y setter
 }

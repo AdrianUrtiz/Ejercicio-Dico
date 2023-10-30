@@ -49,7 +49,6 @@ class EmpleadoSucursal3 extends Empleado {
 class Sucursal1 extends Sucursal {
     @Override
     public String obtenerListadoEmpleados() {
-        // Implementación específica de listado por RFC
         empleados.sort((e1, e2) -> e1.getRfc().compareTo(e2.getRfc()));
         StringBuilder listado = new StringBuilder();
         for (Empleado empleado : empleados) {
@@ -62,7 +61,6 @@ class Sucursal1 extends Sucursal {
 class Sucursal2 extends Sucursal {
     @Override
     public String obtenerListadoEmpleados() {
-        // Implementación específica de listado general (limitado a 5 empleados)
         StringBuilder listado = new StringBuilder();
         for (Empleado empleado : empleados) {
             listado.append(empleado.obtenerInformacion()).append("\n");
@@ -74,7 +72,6 @@ class Sucursal2 extends Sucursal {
 class Sucursal3 extends Sucursal {
     @Override
     public String obtenerListadoEmpleados() {
-        // Implementación específica de listado por Apellido Paterno
         empleados.sort((e1, e2) -> e1.getApellidoPaterno().compareTo(e2.getApellidoPaterno()));
         StringBuilder listado = new StringBuilder();
         for (Empleado empleado : empleados) {
